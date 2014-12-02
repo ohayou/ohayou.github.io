@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/hkdscss.css" type="text/css" />
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css"/>
+	<script src="js/modernizr.js"></script>
+	<title>
+		Hong Kong Dim Sim
+	</title>
+</head>
+
+<body id="home">
+
+	<div class="navbar">
+		<img src="images/logo.png">
+		<div class="row" style="height: 55px;"></div>
+		<div class="row">
+			<a href="#home">Home</a>
+			<a href="#about">About us</a>
+			<a href="#products">Products</a>
+			<a href="#promotions">Promotions</a>
+			<a href="#contact">Contact Us</a>
+			<a href="HKDSBrochure.pdf">Download our brochure</a>
+		</div>
+		</div>
+	</div>
+	<div class="panel">
+		<div class="panel-body">
+		<!-- begin carousel -->
+			<div class="slider-wrapper">
+				<div class="flexslider">
+				  <ul class="slides">
+				    <li>
+				      <img src="images/slide1.jpg" />
+				    </li>
+				    <li>
+				      <img src="images/slide2.jpg" />
+				    </li>
+				    <li>
+				      <img src="images/slide3.jpg" />
+				    </li>
+				    <li>
+				      <img src="images/slide4.jpg" />
+				    </li>
+				  </ul>
+				</div>
+			</div>
+			<!-- end carousel -->
+		</div>
+	</div>
+	<div class="panel" id="about">
+		<p>about</p>
+	</div>
+	<div class="panel" id="products">
+		<p>products</p>
+	</div>
+	<div class="panel" id="promotions">
+		<p>promotions</p>
+	</div>
+	<div class="panel" id="contact">
+		<p>contact</p>
+	</div>
+
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+  <!-- FlexSlider -->
+  <script defer src="js/jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: target.offset().top - 134
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
+	</script>
+</body>
