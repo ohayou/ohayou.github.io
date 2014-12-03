@@ -1,0 +1,460 @@
+/*
+Copyright (c) 2012 Coding Stuff
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), 
+to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+For more Check us out www.coding-stuff.com
+*/
+
+body {
+    margin: 0;
+    color: #333333;
+	overflow-x: hidden;
+}
+
+
+/* buttons */
+
+.s-button,
+.s-button:hover{	
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;	
+}	
+
+.s-button{
+	padding: 8px 12px;
+	font-size: 1.5em;
+	text-decoration: none;
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	-o-border-radius: 3px; 
+	border-radius: 3px;
+	font-weight: 1000px;
+	background: #7A0000;
+	text-shadow: 0px 1px 1px #fff; 
+	border: 1px solid rgba(0, 0, 0, .2);
+	color: rgba(1 ,1 , 1, .6);		
+	-webkit-box-shadow: inset 0 2px  5px rgba( 0, 0, 0, .1), 0px 1px 1px rgba( 0, 0, 0, .1);
+	  -moz-box-shadow: inset 0 2px 5px rgba( 0, 0, 0, .1), 0px 1px 1px rgba( 0, 0, 0, .1);
+		box-shadow: inset 0 2px 5px rgba( 0, 0, 0, .1), 0px 1px  1px rgba( 0, 0, 0, .1);	
+}
+
+.s-button:hover,
+.s-button.default:hover{
+	text-decoration: none;
+	color: rgba(1 ,1 , 1, 1);	
+	border-top: 1px solid rgba(0, 0, 0, .15);
+	border-bottom: 1px solid rgba(0, 0, 0, .15);	
+	-webkit-box-shadow: inset 0 2px  5px rgba( 0, 0, 0, .1), 0px 1px 1px rgba( 0, 0, 0, .7), 0px 0px 5px rgba( 0, 0, 0, .05);
+	  -moz-box-shadow: inset 0 2px 5px rgba( 0, 0, 0, .1), 0px 1px 1px rgba( 0, 0, 0, .7), 0px 0px 5px rgba( 0, 0, 0, .05);
+		box-shadow: inset 0 2px 5px rgba( 0, 0, 0, .1), 0px 1px  1px rgba( 0, 0, 0, .7), 0px 0px 5px rgba( 0, 0, 0, .05);		
+}
+
+.s-button:active,
+.s-button.active{
+	color: rgba(1 ,1 , 1, .6);		
+	border: 1px solid rgba(0, 0, 0, .2);
+	border-top:  1px solid rgba(0, 0, 0, .3);
+	border-bottom:  1px solid rgba(0, 0, 0, .3);	
+	-webkit-transition: all 50ms ease-in-out;
+	-moz-transition: all 50ms ease-in-out;
+	-ms-transition: all 50ms ease-in-out;
+	-o-transition: all 50ms ease-in-out;
+	transition: all 50ms ease-in-out;		
+	-webkit-box-shadow: inset 0 2px  5px rgba( 0, 0, 0, .3), inset 0px 0px  15px rgba( 0, 0, 0, .05);
+	  -moz-box-shadow: inset 0 2px 5px rgba( 0, 0, 0, .3), inset 0px 0px  15px rgba( 0, 0, 0, .05);
+		box-shadow: inset 0 2px 5px rgba( 0, 0, 0, .3), inset 0px 0px  15px rgba( 0, 0, 0, .05);
+}
+
+/* Shadow below - levitating apearance */
+
+.w-shadow{
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.w-shadow:after{
+	content: ' ';
+	position: absolute;
+	bottom: -20px;
+	left: 0px;
+	right: 0px;
+	background: rgba(0, 0, 0, .1);
+	z-index: -1;
+	height: 7px;
+	-webkit-box-shadow: 0px 0px  15px rgba( 0, 0, 0, .2);
+	  -moz-box-shadow: 0px 0px  15px rgba( 0, 0, 0, .2);
+		box-shadow: 0px 0px  15px rgba( 0, 0, 0, .2);	
+	-webkit-border-radius: 180px; 
+	-moz-border-radius: 180px; 
+	-o-border-radius: 180px; 
+	border-radius: 180px;	
+	
+}
+
+
+/* navbar */
+
+
+nav{
+	display: block;
+	width: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+	position: relative;
+}
+
+nav:not(.s-collapse) .nav-container{
+	max-width: 900px;
+	min-width: 350px;
+	margin: 0px auto;	
+}
+
+nav .nav-container:before,
+nav .nav-container:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+nav .nav-container:after {
+  clear: both;
+}
+
+
+nav .nav-menu,
+nav .nav-menu ul{
+	float: left;
+	list-style: none;
+	margin: 0px;
+	margin-left: 15px;	
+	padding: 0px;
+	z-index: 10;	
+}
+
+nav .nav-menu ul{
+	font-size: 13px;
+	margin: 0px;	
+}
+
+nav .nav-menu li{
+	float: left;
+	position: relative;	
+}
+
+nav .nav-menu.center{
+	float: none;
+	display: table;
+	margin: 0px auto;
+}
+	
+nav .nav-menu li a{
+	display: block;
+	-webkit-transition: all 140ms ease-in-out;
+	-moz-transition: all 140ms ease-in-out;
+	-ms-transition: all 140ms ease-in-out;
+	-o-transition: all 140ms ease-in-out;
+	transition: all 140ms ease-in-out;		
+}
+
+nav .nav-menu li a:hover{
+	-webkit-transition: all 240ms ease-in-out;
+	-moz-transition: all 240ms ease-in-out;
+	-ms-transition: all 240ms ease-in-out;
+	-o-transition: all 240ms ease-in-out;
+	transition: all 240ms ease-in-out;			
+}
+
+nav .nav-menu li a:active{
+	-webkit-transition: all 50ms ease-in-out;
+	-moz-transition: all 50ms ease-in-out;
+	-ms-transition: all 50ms ease-in-out;
+	-o-transition: all 50ms ease-in-out;
+	transition: all 50ms ease-in-out;			
+}
+
+nav .nav-menu li > ul{
+	position: absolute;
+	top: 100.999%;
+	left: 0px;
+	opacity: 0;
+	z-index: 9;
+	visibility: hidden;	
+	-webkit-transition: all 240ms ease-in-out;
+	-moz-transition: all 240ms ease-in-out;
+	-ms-transition: all 240ms ease-in-out;
+	-o-transition: all 240ms ease-in-out;
+	transition: all 240ms ease-in-out;	
+}
+
+nav .nav-menu li:hover > ul{
+	opacity: 1;
+	visibility: visible;	
+	display: block;	
+	-webkit-transition: all 240ms ease-in-out;
+	-moz-transition: all 240ms ease-in-out;
+	-ms-transition: all 240ms ease-in-out;
+	-o-transition: all 240ms ease-in-out;
+	transition: all 240ms ease-in-out;	
+}
+
+nav .nav-menu li ul li > ul{
+	left: 100%;
+	top: 0px;
+}
+
+nav .nav-menu li ul li{
+	display: block;
+	white-space: nowrap;
+	float: none;
+}	
+
+/*==========================================
+
+	Nav Positions
+
+============================================*/
+
+nav.fixed-top{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	-webkit-border-radius: 0px; 
+	-moz-border-radius: 0px; 
+	-o-border-radius: 0px; 
+	border-radius: 0px;	
+	z-index: 9999;
+}
+
+
+/*==========================================
+
+	Nav Sizes
+
+============================================*/
+
+/* default size */
+
+nav .nav-menu li a{
+	position: relative;
+	padding: 13px;
+}
+
+
+/* nav large */
+
+nav:not(.s-collapse).large .nav-menu li a{
+	padding: 20px;
+	font-weight: bold;
+}
+
+
+/*============================================
+
+	nav s-collapse trigger
+
+=============================================*/
+
+nav .s-collapse-trigger{
+	float: right;
+	text-align: center;
+	margin-top: 5px;
+	margin-right: 10px;
+	height: 20px;
+	width: 14px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	font-weight: bold;
+	font-size: 2em;
+	display: none;	
+}
+
+nav .nav-menu li a > .s-collapse-trigger{
+	font-size: 1.5em;
+	margin-top: 6px;
+	padding: 5px 8px;	
+}
+
+nav .nav-menu li ul li .s-collapse-trigger{
+	font-size: 1.2em;
+	margin-top: 6px;
+	margin-right: 12px;	
+	padding: 2px 6px;	
+}
+
+
+/* default skins */
+
+nav{
+	border: 1px solid rgba( 0, 0, 0, .3);
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-o-border-radius: 5px; 
+	border-radius: 5px;
+	background: #7A0000; /* Old browsers */	
+	-webkit-box-shadow: inset 2px 0px 15px rgba( 0, 0, 0, 0.05), 2px 5px 15px rgba( 0, 0, 0, 0.1),  0px 2px 2px rgba( 0, 0, 0, 0.1);
+	  -moz-box-shadow: inset 2px 0px 15px rgba( 0, 0, 0, 0.05), 2px 5px 15px rgba( 0, 0, 0, 0.1),  0px 2px 2px rgba( 0, 0, 0, 0.1);
+		box-shadow: inset 2px 0px 15px rgba( 0, 0, 0, 0.05), 2px 5px 15px rgba( 0, 0, 0, 0.1),  0px 2px 2px rgba( 0, 0, 0, 0.1);	
+}
+
+nav .nav-menu li ul ul,
+nav .nav-menu li ul{
+	background: #7A0000; /* Old browsers */
+	-webkit-box-shadow: inset 2px 0px 15px rgba( 0, 0, 0, 0.05), 2px 5px 15px rgba( 0, 0, 0, 0.1),  0px 2px 2px rgba( 0, 0, 0, 0.1);
+	  -moz-box-shadow: inset 2px 0px 15px rgba( 0, 0, 0, 0.05), 2px 5px 15px rgba( 0, 0, 0, 0.1),  0px 2px 2px rgba( 0, 0, 0, 0.1);
+		box-shadow: inset 2px 0px 15px rgba( 0, 0, 0, 0.05), 2px 5px 15px rgba( 0, 0, 0, 0.1),  0px 2px 2px rgba( 0, 0, 0, 0.1);	
+}
+
+nav .nav-menu li a{
+	color: white;
+	text-shadow: 0px 1px 1px rgba( 255, 255, 255, .8);
+	text-decoration: none;
+}
+
+nav .nav-menu li a:hover{
+	color: rgba(5, 5, 5, .8);
+	-webkit-box-shadow: inset 0 2px  19px rgba( 5, 5, 5, 0.1);
+	  -moz-box-shadow: inset 0 2px 19px rgba( 5, 5, 5,  0.1);
+		box-shadow: inset 0 2px 19px rgba( 5, 5, 5, 0.1);
+}
+
+nav .nav-menu li  ul li a:hover,
+nav .nav-menu li  ul li:hover > a{
+	background: #7A0000;
+}
+
+nav .nav-menu li a:active,
+nav .nav-menu li.active > a{
+	-webkit-box-shadow: inset 0 2px  25px rgba( 0, 0, 0, 0.2), inset -2px 0px  2px rgba( 0, 0, 0, .2);
+	  -moz-box-shadow: inset 0 2px 25px rgba( 0, 0, 0, 0.2), inset -2px 0px  2px rgba( 0, 0, 0, .2);
+		box-shadow: inset 0 2px 25px rgba( 0, 0, 0, 0.2), inset -2px 0px  2px rgba( 0, 0, 0, .2);	
+}
+
+
+nav li ul li:last-child > a:after{
+	border: none;
+}
+
+
+nav .s-button{
+	background: #7A0000;
+}
+
+
+nav.s-collapse .nav-menu > li > a:hover,
+nav.s-collapse .nav-menu > li:hover > a,
+nav.s-collapse .nav-menu > li.active > a,
+nav.s-collapse .nav-menu li > a:active{
+	background: #8abbd7; /* Old browsers */
+	-webkit-box-shadow: none;
+	  -moz-box-shadow: none;
+		box-shadow: none;	
+	color: #fff;
+	text-shadow: none;	
+}
+
+
+/*==========================================
+
+	Responsive Nav s-collapse
+
+===========================================*/
+
+nav.s-collapse{
+	min-height: 50px;
+}
+
+nav.s-collapse > .nav-menu{
+	display: none;
+}
+
+
+nav.s-collapse .s-collapse-trigger{
+	display: block;
+}
+
+nav.s-collapse:first-child .nav-menu{
+	margin: 0px auto;
+	margin-top: 50px;
+}
+
+nav.s-collapse .nav-menu,
+nav.s-collapse .nav-menu ul{
+	width: 100%;
+	float: left;
+}
+
+
+nav.s-collapse .nav-menu li,
+nav.s-collapse .nav-menu ul li{
+	width: 100%;
+	float: none;
+}
+
+nav.s-collapse .nav-menu li a,
+nav.s-collapse .nav-menu li a.active {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+nav.s-collapse .nav-menu li a{
+	font-weight: bold;
+	float: none;
+	margin-bottom: 5px;
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-o-border-radius: 5px; 
+	border-radius: 5px;
+}
+
+/* submenus */
+
+nav.s-collapse .nav-menu li ul, 
+nav.s-collapse .nav-menu li ul ul{
+	border: none;
+	-webkit-box-shadow: none;
+	  -moz-box-shadow: none;
+		box-shadow: none;	
+	background: none;	
+	position: relative;
+	visibility: visible;
+	opacity: 1;
+	float: none;
+	margin-top: 0px;
+	margin-left: 0px;
+	display: none;
+}
+
+nav.s-collapse .nav-menu li ul ul{
+	position: static;
+	margin-left: 5%;
+	width: auto;
+}
+
+nav.s-collapse .nav-menu li ul:before,
+nav.s-collapse .nav-menu li ul:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+nav.s-collapse .nav-menu li ul:after {
+  clear: both;
+}
+
+
+
