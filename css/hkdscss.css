@@ -12,7 +12,7 @@ body {
 	list-style: none;
 	top: 0;
 	width: 100%;
-	background-image: url("images/navbar.png");
+	background-image: url("../images/navbar.png");
 	background-repeat: repeat;
 	height: 134px;
 	text-align: center;
