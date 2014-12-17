@@ -123,8 +123,8 @@ body {
     /* Note: Design for a width of 320px */
 
     @media only screen and (max-width: 767px) {
-    	.navbar {height: 134px;}
-    	.navbar img {height: 60px;}
+    	.navbar {height: 100px;}
+    	.navbar img {height: 100px;}
     	.navbar ul { margin-top: 5px;}
     	.navbar a { font-size: 12px}
 
