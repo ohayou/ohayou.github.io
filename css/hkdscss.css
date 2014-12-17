@@ -121,7 +121,7 @@ body {
     /* Note: Design for a width of 320px */
 
     @media only screen and (max-width: 767px) {
-    	.navbar {height: 60px;}
+    	.navbar {height: 30px;}
     	.navbar img {height: 60px;}
     	.navbar ul { margin-top: 5px;}
     	body { padding-top: 60px;}
@@ -134,7 +134,7 @@ body {
     /* Note: Design for a width of 480px */
 
     @media only screen and (min-width: 480px) and (max-width: 767px) {
-    	.navbar {height: 60px;}
+    	.navbar {height: 30px;}
     	.navbar img {height: 60px;}
     	.navbar ul { margin-top: 5px}
     	body { padding-top: 60px;}
